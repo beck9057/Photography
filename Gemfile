@@ -9,6 +9,10 @@ gem 'sqlite3'
 gem 'carrierwave'
 # Allow picture resizing
 gem 'rmagick'
+# file attachment library for Active Record
+gem "paperclip"
+#html5 shiv -- see https://github.com/dgm/html5shiv-rails
+gem 'html5shiv-rails'
 # User logins
 gem 'devise'
 # Use SCSS for stylesheets
