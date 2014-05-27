@@ -11,5 +11,4 @@
 #
 
 class Photo < ActiveRecord::Base
-    attr_accessible :url, :event_id, :photographer_id
 end

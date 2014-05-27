@@ -11,6 +11,4 @@
 
 class Client < ActiveRecord::Base
   has_many :events
-  
-  attr_accessible :name, :email
 end
