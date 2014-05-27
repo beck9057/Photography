@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def gallery
   end
 
   def contact

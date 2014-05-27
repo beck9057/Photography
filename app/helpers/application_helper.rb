@@ -9,4 +9,8 @@ module ApplicationHelper
       "#{@title} | #{base_title}"
     end
   end
+  
+  def logo
+    image_tag("logo.png", :alt => "Kyle Falconer Photography", :class => "pure-u-1 SiteLogo")
+  end
 end

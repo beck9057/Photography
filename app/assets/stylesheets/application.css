@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+header {display:block;overflow:hidden;}
+header>nav>ul {list-style:none;}
+header>nav>ul>li {float:left; margin-left:10px; margin-right:10px;}
+header>nav>ul>li a, header>nav>ul>li a:visited {color:#0099CC; text-decoration:none;}
