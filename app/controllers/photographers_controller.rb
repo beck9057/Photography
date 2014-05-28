@@ -10,6 +10,7 @@ class PhotographersController < ApplicationController
   # GET /photographers/1
   # GET /photographers/1.json
   def show
+    @photographer = Photographer.find(params[:id])
   end
 
   # GET /photographers/new
