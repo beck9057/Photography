@@ -49,7 +49,6 @@ gem 'bcrypt'
 # gem 'debugger', group: [:development, :test]
 
 group :development do
-  gem 'rspec-rails'
   gem 'annotate'
 end
 

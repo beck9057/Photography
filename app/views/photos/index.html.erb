@@ -13,9 +13,9 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.photographer_id %></td>
-        <td><%= photo.event_id %></td>
-        <td><%= photo.url %></td>
+		<td><%= image_tag photo.image.url(:thumb) %></td>
+        <td><%= photographer_name :id => photo.photographer_id %></td>
+        <td><%= event_name :id => photo.event_id %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
