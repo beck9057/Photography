@@ -24,9 +24,8 @@ class Photographer < ActiveRecord::Base
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
   validates :password,
-            presence: true,
-            confirmation: true,
-            length: { in: 6..255 }
+            length: { minimum: 6 },
+            on: :create
             
   before_save { email.downcase! }
             
