@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root 'pages#gallery'
-  get '/contact', :to => 'pages#contact'
+#  get '/contact', :to => 'pages#contact'
   get '/gallery', :to => 'pages#gallery'
   get '/about', :to => 'pages#about'
 
+  get '/contact', :to => 'contacts#new'
+  get '/contacts', :to => 'contacts#new'
+  resources "contacts", only: [:new, :create]
 
   resources :photos
 

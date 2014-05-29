@@ -11,6 +11,8 @@
 #  image_updated_at   :datetime
 #  created_at         :datetime
 #  updated_at         :datetime
+#  description        :string(255)
+#  is_landscape       :boolean
 #
 
 class Photo < ActiveRecord::Base

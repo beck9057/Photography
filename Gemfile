@@ -39,6 +39,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
+gem 'mail_form'
+gem 'simple_form'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
