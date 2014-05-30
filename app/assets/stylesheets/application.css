@@ -12,11 +12,21 @@
  *
  *= require_tree .
  *= require_self
+ *= require purecss
+ *= require fancybox
  */
+
+html, body, div, span, ul, li, p, img {padding:0;margin:0;}
+img{vertical-align: top;}
+html, body {height:100%; width:100%;}
+img, li {display:inline-block;}
+
 header {display:block;overflow:hidden;}
 header>nav>ul {list-style:none;}
 header>nav>ul>li {float:left; margin-left:10px; margin-right:10px;}
 header>nav>ul>li a, header>nav>ul>li a:visited {color:#0099CC; text-decoration:none;}
+
+body>header, body>article, body>section{max-width: 1000px;margin-left: auto;margin-right: auto;}
 
 .hidden { display: none; }
 
@@ -48,3 +58,9 @@ border-color: #d6e9c6;
 color: #468847;
 text-align: left;
 }
+
+a:hover {background-color:transparent;}
+
+
+.photo-wrapper {float:left;}
+.gallery-wrapper{float:none; clear:both; overflow:hidden;}

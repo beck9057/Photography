@@ -1,29 +1,33 @@
-<h1>Listing photos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Photographer</th>
-      <th>Event</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+
+<!-- if logged in
+	<%= link_to 'New Photo', new_photo_path %>-->
+	
+<article class="pure-g-r">
+	<h1 class="pure-u-1">Portfolio</h1>
+	<section class="pure-u-1 gallery-wrapper ">
     <% @photos.each do |photo| %>
-      <tr>
-		<td><%= image_tag photo.image.url(:thumb) %></td>
-        <td><%= photographer_name :id => photo.photographer_id %></td>
-        <td><%= event_name :id => photo.event_id %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Photo', new_photo_path %>
+		<div class="photo-wrapper">
+			<%= link_to image_tag( photo.image.url(:small),	:data => {
+				:photographer => (photographer_name :id => photo.photographer_id),
+				:event => (event_name :id => photo.event_id),
+				:orientation => (photo.is_landscape ? "landscape" : "portrait")
+				}), 
+				photo.image.url(:large), 
+				class: "fancybox", 
+				"data-fancybox-group" => "gallery" %>
+	  
+			<!-- if logged in -->
+			<% if false %>
+			<span>
+				<%= link_to 'Show', photo %><br/>
+				<%= link_to 'Edit', edit_photo_path(photo) %><br/>
+				<%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</span>
+			<% end%>
+		</div>
+	<% end %>
+	</section>
+</article>

@@ -1,5 +1,7 @@
 class PhotographersController < ApplicationController
   before_action :set_photographer, only: [:show, :edit, :update, :destroy]
+  
+  # include SessionsHelper
 
   # GET /photographers
   # GET /photographers.json

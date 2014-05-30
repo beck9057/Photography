@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root 'pages#gallery'
-#  get '/contact', :to => 'pages#contact'
+  
+  #root 'pages#gallery'
   get '/gallery', :to => 'pages#gallery'
+  
+  root 'photos#index'
+  #get '/gallery', :to => 'photos#index'
+  
   get '/about', :to => 'pages#about'
 
   get '/contact', :to => 'contacts#new'

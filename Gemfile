@@ -9,8 +9,17 @@ gem 'sqlite3'
 gem 'carrierwave'
 # Allow picture resizing
 gem 'rmagick'
+
+gem "cocaine"
+
+gem 'purecss-rails'
+
 # file attachment library for Active Record
 gem "paperclip"
+
+# fancybox 2, depends on jquery-rails -- https://github.com/kyparn/fancybox2-rails
+gem 'fancybox2-rails', '~> 0.2.8'
+
 #html5 shiv -- see https://github.com/dgm/html5shiv-rails
 gem 'html5shiv-rails'
 # User logins

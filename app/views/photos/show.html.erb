@@ -1,5 +1,7 @@
+<%= link_to 'Back', photos_path %>
 <p id="notice"><%= notice %></p>
 
+	<%= image_tag @photo.image.url(:large) %>
 <p>
   <strong>Photographer:</strong>
   <%= photographer_name %>
@@ -9,10 +11,13 @@
   <strong>Event:</strong>
   <%= event_name %>
 </p>
-<p>
-	<strong>image:</strong>
-	<%= image_tag @photo.image.url(:thumb) %>
-</p>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+
+
+
+<!-- if logged in -->
+<% if false %>
+<%= link_to 'Edit', edit_photo_path(@photo) %>
+<% end%>
+
+

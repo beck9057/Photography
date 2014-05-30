@@ -70,6 +70,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     hike (1.2.3)
     html5shiv-rails (0.0.2)
       railties (>= 3.2.0, < 5.0)
@@ -100,6 +102,8 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     polyglot (0.3.4)
+    purecss-rails (0.3.0)
+      railties (>= 3.2.6, < 5)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -183,15 +187,18 @@ DEPENDENCIES
   bcrypt
   capybara
   carrierwave
+  cocaine
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
   factory_girl_rails
+  fancybox2-rails (~> 0.2.8)
   html5shiv-rails
   jbuilder (~> 2.0)
   jquery-rails
   mail_form
   paperclip
+  purecss-rails
   rails (= 4.1.1)
   rmagick
   rspec-rails

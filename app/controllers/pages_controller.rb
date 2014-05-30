@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def gallery
-    @title = "Gallery"
+    @title = "Portfolio"
   end
 
   def contact
