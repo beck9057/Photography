@@ -5,25 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# Allow picture uploads
-gem 'carrierwave'
-# Allow picture resizing
-gem 'rmagick'
-
-gem "cocaine"
-
-gem 'purecss-rails'
-
-# file attachment library for Active Record
-gem "paperclip"
-
-# fancybox 2, depends on jquery-rails -- https://github.com/kyparn/fancybox2-rails
-gem 'fancybox2-rails', '~> 0.2.8'
-
-#html5 shiv -- see https://github.com/dgm/html5shiv-rails
-gem 'html5shiv-rails'
-# User logins
-gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,10 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt'
-
-gem 'mail_form'
-gem 'simple_form'
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -60,13 +38,3 @@ gem 'simple_form'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development do
-  gem 'annotate'
-end
-
-group :test do
-  gem 'database_cleaner'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'factory_girl_rails'
-end

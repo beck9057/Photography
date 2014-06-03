@@ -1,24 +1,4 @@
 Rails.application.routes.draw do
-  
-  #root 'pages#gallery'
-  get '/gallery', :to => 'pages#gallery'
-  
-  root 'photos#index'
-  #get '/gallery', :to => 'photos#index'
-  
-  get '/about', :to => 'pages#about'
-  get '/contact', :to => 'contacts#new'
-  get '/contacts', :to => 'contacts#new'
-  resources "contacts", only: [:new, :create]
-
-  resources :photos
-
-  resources :events
-
-  resources :clients
-
-  resources :photographers
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

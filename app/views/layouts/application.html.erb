@@ -1,46 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-	<%= csrf_meta_tags %>
-	<!--[if lt IE 9]>
-	  <%= javascript_include_tag 'html5shiv-printshiv' %>
-	<![endif]-->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  </head>
-  <body>
-	  <header class="pure-g-r">
-		  <p class="pure-u-1 SiteLogo">Kyle Falconer Photography</p>
-		  <!--  <%= link_to logo,	root_path %>-->
-		  <nav id="site_nav" class="pure-u-1">
-			  <ul>
-				  <li><%= link_to "Portfolio", photos_path %></li>
-				  <li><%= link_to "About", about_path %></li>
-				  <li><%= link_to "Contact", contact_path %></li>
-			  </ul>
-		  </nav>
-	  </header>
+<head>
+  <title>Photography</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-	  <%= yield %>
-	  <% if false %>
-	  <%= debug(params) if Rails.env.development? %>
-	  <% end%>
-	  
-	  <footer class="pure-g-r">
-		  <section class="pure-u-1">
-			 <p>&copy; 2014 Kyle Falconer</p>
-		  </section>
-	  </footer>
-	  
-	  <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<%= yield %>
 
-	  ga('create', 'UA-51236811-1', 'kylefalconer.photography');
-	  ga('send', 'pageview');
-	  </script>
-  </body>
+</body>
 </html>
