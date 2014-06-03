@@ -27,11 +27,22 @@ class Photo < ActiveRecord::Base
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   
   before_post_process :check_file_size
+  
+  before_save :set_orientation
 
+  protected
+  
   def check_file_size
     valid?
     errors[:image_file_size].blank?
   end
   
+  def set_orientation
+    img = self.image
+    geo = Paperclip::Geometry.from_file(Paperclip.io_adapters.for(img.styles[:thumb])) 
+    ratio = geo.width/geo.height
+    self[:is_landscape] = ratio > 1
+    return
+  end
   
 end

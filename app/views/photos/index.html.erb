@@ -1,19 +1,17 @@
+<!-- if logged in -->
+<% if false %>
+<%= link_to 'New Photo', new_photo_path %>
+<% end%>
 
-
-
-
-<!-- if logged in
-	<%= link_to 'New Photo', new_photo_path %>-->
-	
 <article class="pure-g-r">
-	<h1 class="pure-u-1">Portfolio</h1>
-	<section class="pure-u-1 gallery-wrapper ">
+	<h1 class="pure-u-1 hidden">Portfolio</h1>
+	<section class="pure-u-1 gallery-wrapper ">	
     <% @photos.each do |photo| %>
 		<div class="photo-wrapper">
-			<%= link_to image_tag( photo.image.url(:small),	:data => {
+			<%= link_to image_tag( photo.image.url(:medium),	:data => {
 				:photographer => (photographer_name :id => photo.photographer_id),
 				:event => (event_name :id => photo.event_id),
-				:orientation => (photo.is_landscape ? "landscape" : "portrait")
+				:orientation => (orientation :o => photo.is_landscape)
 				}), 
 				photo.image.url(:large), 
 				class: "fancybox", 
@@ -21,9 +19,9 @@
 	  
 			<!-- if logged in -->
 			<% if false %>
-			<span>
-				<%= link_to 'Show', photo %><br/>
-				<%= link_to 'Edit', edit_photo_path(photo) %><br/>
+			<span class="meta-controls">
+				<%= link_to 'Show', photo %>&nbsp;
+				<%= link_to 'Edit', edit_photo_path(photo) %>&nbsp;
 				<%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
 			</span>
 			<% end%>

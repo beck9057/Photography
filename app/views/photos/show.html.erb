@@ -1,7 +1,12 @@
 <%= link_to 'Back', photos_path %>
 <p id="notice"><%= notice %></p>
 
-	<%= image_tag @photo.image.url(:large) %>
+	<%= image_tag @photo.image.url(:large), :data => {
+					:photographer => (photographer_name :id => @photo.photographer_id),
+					:event => (event_name :id => @photo.event_id),
+					:orientation => (orientation :o => @photo.is_landscape)
+					} %>
+	
 <p>
   <strong>Photographer:</strong>
   <%= photographer_name %>
@@ -16,7 +21,7 @@
 
 
 <!-- if logged in -->
-<% if false %>
+<% if true %>
 <%= link_to 'Edit', edit_photo_path(@photo) %>
 <% end%>
 

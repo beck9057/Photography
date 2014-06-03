@@ -18,4 +18,8 @@ module PhotosHelper
     end
   end
   
+  def orientation(o: @photo.is_landscape)
+     (o ? "landscape" : "portrait")
+  end
+  
 end

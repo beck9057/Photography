@@ -11,8 +11,8 @@
   </head>
   <body>
 	  <header class="pure-g-r">
-		  
-		  <%= link_to logo,	root_path %>
+		  <p class="pure-u-1 SiteLogo">Kyle Falconer Photography</p>
+		  <!--  <%= link_to logo,	root_path %>-->
 		  <nav id="site_nav" class="pure-u-1">
 			  <ul>
 				  <li><%= link_to "Portfolio", photos_path %></li>
@@ -23,11 +23,13 @@
 	  </header>
 
 	  <%= yield %>
-	  
+	  <% if false %>
 	  <%= debug(params) if Rails.env.development? %>
+	  <% end%>
+	  
 	  <footer class="pure-g-r">
 		  <section class="pure-u-1">
-			  &copy; 2014 Kyle Falconer
+			 <p>&copy; 2014 Kyle Falconer</p>
 		  </section>
 	  </footer>
 	  
