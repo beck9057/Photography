@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+<nav id="user_controls">
+<p>Signed in as <%= current_user.email %>.</p>
+<ul>
+	<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+	<li><%= link_to "Dashboard", dashboard_path %></li>
+</ul>
+<% end %>
+
 <%= yield %>
 
 </body>
