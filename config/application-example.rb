@@ -27,7 +27,7 @@ module Photography
       port:                 587,
       domain:               'kylefalconer.photography',
       user_name:            'kfalconer@gmail.com',
-      password:             'password',
+      password:             'wsdxeufzpxitodlg',
       authentication:       'plain',
       enable_starttls_auto: true  }
     
