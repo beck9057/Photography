@@ -16,15 +16,22 @@
 		  <nav id="site_nav" class="pure-u-1">
 			  <ul>
 				  <li><%= link_to "Portfolio", root_path %></li>
+				  <li><%= link_to "Contact", contact_path %></li>
 			  </ul>
 		  </nav>
+		  
 		  <% if user_signed_in? %>
 		  <nav id="user_controls" class="pure-u-1">
-		  <p>Signed in as <%= current_user.name %>.</p>
-		  <ul>
-		  	<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
-		  	<li><%= link_to "Dashboard", dashboard_path %></li>
-		  </ul>
+		  	<p>Signed in as <%= current_user.name %>.</p>
+		  	<ul>
+		  		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+		  		<li><%= link_to "Dashboard", dashboard_path %></li>
+		  	</ul>
+	  	  </nav>
+		  <% end %>
+		  
+		  <% if flash[:notice] %>
+		  <div class="notice pure-u-1"><%= flash[:notice] %></div>
 		  <% end %>
 	  </header>
 

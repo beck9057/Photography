@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   devise_for :user, :controllers => { registrations: 'registrations' }
 
   resources :photos
+  
+  match 'contact', to: 'contact#new', via: :get
+  match 'contact', to: 'contact#create', via: :post
 
   
   # The priority is based upon order of creation: first created -> highest priority.
