@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'portfolio#index'
-  
+  get 'about' => 'about#index'
   get 'dashboard' => 'dashboard#index'
   
   devise_for :user, :controllers => { registrations: 'registrations' }

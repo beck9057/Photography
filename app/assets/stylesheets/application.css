@@ -93,6 +93,8 @@ line-height: 1.5em;text-align: center;display: inline-block;overflow: hidden;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00739aff', endColorstr='#00739aff',GradientType=1 ); /* IE6-9 */
 }
 
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {background-color:rgba(115, 154, 255, 1.0);}
+
 /* http://css-tricks.com/seamless-responsive-photo-grid/ */
 .gallery-wrapper{float:none; clear:both; overflow:hidden;}
 .photo-wrapper {float:left;}
