@@ -1,0 +1,28 @@
+<article class="pure-g-r">
+	<p class="pure-u-1">
+<%= link_to 'New Photo', new_photo_path %>
+</p>
+</article>
+
+<article class="pure-g-r">
+	<h1 class="pure-u-1">Portfolio</h1>
+	<section class="pure-u-1 gallery-wrapper ">
+    <% @photos.each do |photo| %>
+		<div class="photo-wrapper">
+			<%= link_to image_tag( photo.image.url(:small),	:data => {
+				:orientation => (photo.is_landscape ? "landscape" : "portrait")
+				}), 
+				edit_photo_path(photo), 
+				class: "fancybox", 
+				"data-fancybox-group" => "gallery" %>
+
+			<span>
+				<%= link_to 'Show', photo %><br/>
+				<%= link_to 'Edit', edit_photo_path(photo) %><br/>
+				<%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</span>
+
+		</div>
+	<% end %>
+	</section>
+</article>

@@ -1,0 +1,8 @@
+<%= link_to 'Back', photos_path %>
+<p id="notice"><%= notice %></p>
+
+	<%= image_tag @photo.image.url(:large) %>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %>
+

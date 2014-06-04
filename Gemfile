@@ -14,10 +14,24 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+#user authentication
 gem 'devise'
 
+#html5 shiv -- see https://github.com/dgm/html5shiv-rails
+gem 'html5shiv-rails'
+# Yahoo's Pure-CSS
+gem 'purecss-rails'
+
+# Allow picture resizing
+gem 'rmagick'
+# file attachment library for Active Record
+gem "paperclip"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# fancybox 2, depends on jquery-rails -- https://github.com/kyparn/fancybox2-rails
+gem 'fancybox2-rails', '~> 0.2.8'
+
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,6 +41,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+gem 'mail_form'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

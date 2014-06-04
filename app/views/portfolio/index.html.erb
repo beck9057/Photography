@@ -1,1 +1,15 @@
-<h1>portfolio</h1>
+<article class="pure-g-r">
+	<h1 class="pure-u-1">Portfolio</h1>
+	<section class="pure-u-1 gallery-wrapper ">
+    <% @photos.each do |photo| %>
+		<div class="photo-wrapper">				
+			<%= link_to image_tag( photo.image.url(:medium),	:data => {
+						:orientation => (orientation :o => photo.is_landscape)
+						}), 
+						photo.image.url(:large), 
+						class: "fancybox", 
+						"data-fancybox-group" => "gallery" %>
+		</div>
+	<% end %>
+	</section>
+</article>
