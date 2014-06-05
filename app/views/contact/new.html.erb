@@ -2,6 +2,20 @@
 	<h1 class="pure-u-1">Contact</h1>
 	<section class="pure-u-1">
 <%= form_for @message, :url => contact_path, :html => {:class => 'pure-form pure-form-stacked' } do |form|  %>
+   
+  <% if @message.errors.any? %>
+    <div class="error pure-u-1">
+      <h2><%= pluralize(@message.errors.count, "error") %> prevented the form from being submitted:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
   <fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
