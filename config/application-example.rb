@@ -26,8 +26,8 @@ module Photography
       address:              'smtp.gmail.com',
       port:                 587,
       domain:               'kylefalconer.photography',
-      user_name:            'kfalconer@gmail.com',
-      password:             'wsdxeufzpxitodlg',
+      user_name:            'email',
+      password:             'password',
       authentication:       'plain',
       enable_starttls_auto: true  }
     
