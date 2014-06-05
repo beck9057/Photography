@@ -4,7 +4,7 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :subject, :body
+  attr_accessor :name, :email, :phone, :event_date, :subject, :body
 
   validates :name, 
             :email, 

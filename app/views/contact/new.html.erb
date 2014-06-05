@@ -27,6 +27,14 @@
       <%= form.text_field :email, :class => "pure-input-1-3" %>
     </div>
     <div class="field">
+      <%= form.label :phone %>
+      <%= form.telephone_field :phone, :class => "pure-input-1-3" %>
+    </div>
+    <div class="field">
+      <%= form.label :event_date %>
+      <%= form.date_field :event_date, :class => "pure-input-1-3" %>
+    </div>
+    <div class="field">
       <%= form.label :subject %>
       <%= form.text_field :subject, :class => "pure-input-1-3" %>
     </div>
