@@ -156,7 +156,7 @@ line-height: 1.4em;text-align: center;display: block;overflow: hidden;
   -webkit-column-count: 2;
   column-count:         2;
   }
-  header {padding:10px;}
+  header {padding:10px;padding-bottom: 30px;}
   header>nav>ul>li {float:none;}
   header>nav>ul>li:first-child {margin-left:0;}
   header>nav>ul>li:last-child {margin-right:0;}
@@ -172,7 +172,7 @@ line-height: 1.4em;text-align: center;display: block;overflow: hidden;
   -webkit-column-count: 2;
   column-count:         2;
   }
-  header {padding:10px;}
+  header {padding:5px;padding-bottom: 30px;}
   header>nav>ul>li {float:none;}
   header>nav>ul>li:first-child {margin-left:0;}
   header>nav>ul>li:last-child {margin-right:0;}
