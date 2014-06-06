@@ -6,14 +6,14 @@
 	<!--[if lt IE 9]>
 	  <%= javascript_include_tag 'html5shiv-printshiv' %>
 	<![endif]-->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
 	  <header class="pure-g-r">
-		  <p class="pure-u-1 SiteLogo">Kyle Falconer Photography</p>
+		  <p class="pure-u-1 SiteLogo pure-menu-heading">Kyle Falconer Photography</p>
 		  <!--  <%= link_to logo,	root_path %>-->
-		  <nav id="site_nav" class="pure-u-1">
+		  <nav id="site_nav" class="pure-u-1 pure-menu pure-menu-open pure-menu-horizontal">
 			  <ul>
 				  <li><%= link_to "Portfolio", root_path %></li>
 				  <li><%= link_to "About", about_path %></li>
