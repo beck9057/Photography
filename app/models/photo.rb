@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
   has_attached_file :image, {
       :styles => {thumb: "x100", small: "x200", medium: "x400", large: "x800", giant: "x1000"},
-      :convert_options => { thumb: "-quality 75 -strip", small: "-quality 75 -strip", medium: "-quality 75 -strip", large: "-quality 75 -strip", giant: "-quality 75 -strip" }
+      :convert_options => { thumb: "-quality 70 -strip", small: "-quality 70 -strip", medium: "-quality 70 -strip", large: "-quality 70 -strip", giant: "-quality 70 -strip" }
     }
   validates :image, 
             presence: true
