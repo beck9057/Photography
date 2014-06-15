@@ -1,6 +1,11 @@
-<h1>Editing photo</h1>
+<article class="pure-g-r">
+	<h1 class="pure-u-1">Editing photo</h1>
+	<section class="pure-u-1">
 
-<%= render 'form' %>
+		<%= image_tag @photo.image.url(:large) %>
+		<%= render 'form' %>
 
-<%= link_to 'Show', @photo %> |
-<%= link_to 'Back', photos_path %>
+		<%= link_to 'Show', @photo %> |
+		<%= link_to 'Back', photos_path %>
+	</section>
+</article>

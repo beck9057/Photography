@@ -1,7 +1,42 @@
-<article class="pure-g-r">
-	<h1 class="pure-u-1">Portfolio</h1>
+
+		<div id="wedding-carousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators
+			<ol class="carousel-indicators">
+  			  <% @slideshow_photos.each.with_index do |photo, i| %>
+			  <% if photo.show_on_slideshow %>
+			  <li data-target="#wedding-carousel" data-slide-to="<%= i %>" class="<%= i == 0 ? ' active' : '' %>" ></li>
+  			  <% end %>
+			  <% end %>
+	 	   </ol> -->
+
+	 	  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+			  <% @slideshow_photos.each.with_index do |photo, i| %>
+			  <% if photo.show_on_slideshow %>
+			  <div class="item<%= i == 0 ? " active" : "" %> center-cropped" style="background-image: url('<%= photo.image.url(:large) %>');">
+				  <%= image_tag( photo.image.url(:large),	:data => {
+					  :orientation => (orientation :o => photo.is_landscape)
+					  })%>
+				  <!--<div class="carousel-caption">
+					  <%= photo.description %>
+				  </div> -->
+			  </div>
+			  <% end %>			  
+			  <% end %>
+		  </div>
+		  
+		  <!-- Controls
+		  <a class="left carousel-control" href="#wedding-carousel" data-slide="prev">
+			  <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#wedding-carousel" data-slide="next">
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a> -->
+	  </div>
+	  
+<article class="pure-g-r">	
 	<section class="pure-u-1 gallery-wrapper ">
-    <% @photos.each do |photo| %>
+    <% @gallery_photos.each do |photo| %>
 		<div class="photo-wrapper">				
 			<%= link_to image_tag( photo.image.url(:medium),	:data => {
 						:orientation => (orientation :o => photo.is_landscape)

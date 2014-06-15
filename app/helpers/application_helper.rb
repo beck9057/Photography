@@ -14,7 +14,7 @@ module ApplicationHelper
       	root_path,
         :class => "pure-u-1 SiteLogo pure-menu-heading"
     end
-    
+ 
     def orientation(o: @photo.is_landscape)
        (o ? "landscape" : "portrait")
     end

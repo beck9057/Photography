@@ -1,8 +1,22 @@
-<%= link_to 'Back', photos_path %>
-<p id="notice"><%= notice %></p>
+<article class="pure-g-r">
+	<section class="pure-u-1">
+		
+		<p id="notice"><%= notice %></p>
+		
+		<%= link_to 'Back', photos_path %>
+		<%= link_to 'Edit', edit_photo_path(@photo) %>
+		
 
-	<%= image_tag @photo.image.url(:large) %>
+		<div class="photo-wrapper">
+			<%= image_tag @photo.image.url(:large) %>
 
+			<ul class="meta">
+				<li>Description: <%= @photo.description %></li>
+				<li>Orientation: <%= orientation :o => @photo.is_landscape %></li>
+				<li>Show on slideshow: <%= @photo.show_on_slideshow ? "true" : "false" %></li>
+				<li>Show on gallery: <%= @photo.show_on_gallery ? "true" : "false" %></li>
+			</ul>
+		</div>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %>
-
+	</section>
+</article>

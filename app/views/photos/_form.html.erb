@@ -10,12 +10,28 @@
       </ul>
     </div>
   <% end %>
+  
 
  <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
   
+  <div class="field">
+     <%= f.label :description %><br>
+     <%= f.text_field :description %>
+   </div>
+   
+  <div class="field">
+     <%= f.label :show_on_slideshow %><br>
+     <%= f.check_box :show_on_slideshow %>
+   </div>
+    
+    <div class="field">
+       <%= f.label :show_on_gallery %><br>
+       <%= f.check_box :show_on_gallery %>
+     </div>
+	
   <div class="actions">
     <%= f.submit %>
   </div>
