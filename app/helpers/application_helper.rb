@@ -9,8 +9,10 @@ module ApplicationHelper
       end
     end
   
-    def logo
-      image_tag("logo.png", :alt => "Kyle Falconer Photography", :class => "pure-u-1 SiteLogo")
+    def masthead_logo
+      link_to image_tag("kf-photography-logo.png", :alt => "Kyle Falconer Photography", :width => 300, :height => 88),
+      	root_path,
+        :class => "pure-u-1 SiteLogo pure-menu-heading"
     end
     
     def orientation(o: @photo.is_landscape)

@@ -66,13 +66,12 @@ html, button, input, select, textarea, p,
     font-family: "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
-.SiteLogo {color: rgba(115, 154, 255, 0.69);
-font-size: 3em;
-line-height: 3em;}
-
+.SiteLogo {display:inline-block;color: rgba(115, 154, 255, 0.69);position:relative;top:40px;}
 
 #site_nav ul {float: right;}
 #site_nav a {letter-spacing:2px;color: rgba(115, 154, 255, 1);font-size: 1.1em;line-height: 1.1em;}
+#site_nav.pure-menu.pure-menu-open {background-color:transparent;}
+
 /*
 #site_nav {height:40px;}
 #site_nav ul {display:inline-block;overflow:hidden;float: right;}
@@ -158,11 +157,14 @@ line-height: 1.4em;text-align: center;display: block;overflow: hidden;
   }
   header {padding:10px;padding-bottom: 30px;}
   header>nav>ul>li {float:none;}
-  .SiteLogo {font-size: 1.5em; line-height: 1.5em;}
+  .SiteLogo {font-size: 1.5em; line-height: 1.5em;top:20px;}
   h1, h1.pure-u-1 {display:none;}
   #site_nav a {font-size: 1.1em;line-height: 1.1em;}
   .pure-menu.pure-menu-horizontal>ul {height: 1.2em;}
   .pure-menu li a {padding: 6px 12px}
+}
+@media (max-width: 650px) {
+  .SiteLogo {top:0px;}
 }
 @media (max-width: 400px) {
   .gallery-wrapper {
