@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Bundler
+gem 'nokogiri'
+gem 'rack', '~>1.1'
+gem 'rspec', :require => 'spec'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
